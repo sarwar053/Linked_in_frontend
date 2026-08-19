@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+
+@theme{
+  --color-navy:#0d182b;
+  --color-primary-foreground:#F6F8FB;
+  --color-primary:#0066CC;
+  --color-background:#FFFFFF;
+  --color-success:#1E9D33;
+  --color-gold:#CCAC32;
+  --color-muted-foreground:#606872;
+  --color-border:#E0E5EB;
+  --color-destructive:#DC0217;
+  --color-surface:#F8FAFD;
+  --color-accent:#E9F3FF;
+  --color-input:#e0e5eb;
+
+  --shadow-card: 0 1px 2px 0 #0f172a0a, 0 1px 3px 0 #0f172a0f;
+
+}
+
+@layer components {
+  /* Define a reusable ghost button style */
+  .btn-ghost {
+    @apply text-(--color-foreground) rounded-lg justify-center items-center gap-2 px-3.5 py-2 text-sm font-medium transition-colors duration-150 inline-flex hover:bg-black/5
+           
+    
+  }
+  .btn-secondary{
+    @apply text-navy border border-border bg-white rounded-lg justify-center items-center gap-2 px-5 py-3 text-[0.95rem] font-semibold transition-colors duration-150 inline-flex hover:text-primary hover:border-primary
+  }
+  .container-page{
+    @apply w-full max-w-[80rem] mx-auto px-5
+  }
+  .card-surface{
+    @apply bg-background border border-border shadow-[--shadow-card] rounded-[0.875rem] transition-colors duration-200 hover:border-primary/40 
+  }
+  .badge-verified{
+    @apply rounded-full items-center gap-1 px-[0.55rem] py-[0.2rem] inline-flex bg-[color-mix(in_oklab,var(--color-success)_12%,white)] border border-border  text-[#1e9d33] font-[.72rem]
+  }
+  .bg-secondary{
+    @apply bg-[#f0f6fc]
+  }
+  .btn-primary{
+    @apply bg-[#0066cc] text-[#fcfcfc] rounded-lg justify-center items-center gap-2 px-5 py-3 text-[0.95rem] font-semibold transition-colors duration-150 transition-transform duration-150 inline-flex shadow-[0_1px_2px_#0f172a14]
+  }
+   .badge-gold{
+    @apply rounded-full items-center gap-1 px-[0.55rem] py-[0.2rem] inline-flex bg-[color-mix(in_oklab,var(--color-gold)_12%,white)] border border-border  text-[#7b4800] font-[.72rem]  font-semibold
+   }
+   .hero-gradient{
+    @apply bg-[radial-gradient(900px_500px_at_85%_-10%,color-mix(in_oklab,var(--color-primary)_18%,transparent),transparent_60%),radial-gradient(700px_400px_at_-10%_110%,color-mix(in_oklab,var(--color-gold)_14%,transparent),transparent_60%),linear-gradient(180deg,var(--color-navy),lab(3.51789%_.669681_-11.889))]
+   }
+}
+
+
+html{
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+/* Hide the default eye icon in Edge */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+/* Hide the default eye icon in Safari (if applicable) */
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
