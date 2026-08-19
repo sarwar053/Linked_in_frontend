@@ -5,7 +5,7 @@ import Hiw_sectionFive from "./component/Hiw_sectionFive"
 import Hiw_sectionFour from "./component/Hiw_sectionFour"
 import Hiw_sectionOne from "./component/Hiw_sectionOne"
 import Hiw_sectionThree from "./component/Hiw_sectionThree"
-import Hiw_sectionTWO from "./component/Hiw_sectionTWO"
+import Hiw_sectionTWO from "./component/Hiw_sectionTwo"
 
 
 function How_it_works() {
